@@ -5,6 +5,8 @@ Usage:
 
 To import the functions in python use import cec17
 
+The cec17.py and _cec17.so are required files.
+
 First initialize the function as follows: cec17.Init(D,func_num)
 
 For successfull operation the input_data folder is needed, which contains shift and rotation data for each function.
