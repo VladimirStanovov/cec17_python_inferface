@@ -6959,6 +6959,7 @@ SWIGINTERN PyObject *_wrap_cec17_test_func(PyObject *SWIGUNUSEDPARM(self), PyObj
   int arg2 ;
   int arg3 ;
   int arg4 ;
+  int arg5 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   int val2 ;
@@ -6967,10 +6968,12 @@ SWIGINTERN PyObject *_wrap_cec17_test_func(PyObject *SWIGUNUSEDPARM(self), PyObj
   int ecode3 = 0 ;
   int val4 ;
   int ecode4 = 0 ;
-  PyObject *swig_obj[4] ;
+  int val5 ;
+  int ecode5 = 0 ;
+  PyObject *swig_obj[5] ;
   double result;
   
-  if (!SWIG_Python_UnpackTuple(args, "cec17_test_func", 4, 4, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "cec17_test_func", 5, 5, swig_obj)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cec17_test_func" "', argument " "1"" of type '" "double *""'"); 
@@ -6991,7 +6994,12 @@ SWIGINTERN PyObject *_wrap_cec17_test_func(PyObject *SWIGUNUSEDPARM(self), PyObj
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "cec17_test_func" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = (int)(val4);
-  result = (double)cec17_test_func(arg1,arg2,arg3,arg4);
+  ecode5 = SWIG_AsVal_int(swig_obj[4], &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "cec17_test_func" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = (int)(val5);
+  result = (double)cec17_test_func(arg1,arg2,arg3,arg4,arg5);
   resultobj = SWIG_From_double((double)(result));
   return resultobj;
 fail:

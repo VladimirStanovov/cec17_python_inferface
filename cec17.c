@@ -3,7 +3,7 @@
 //#include "cec17.h"
 using namespace std;
 
-double cec17_test_func(double *,int,int,int);
+double cec17_test_func(double *,int,int,int,int);
 double *OShift,*M,*y,*z,*x_bound;
 int ini_flag=0,n_flag,func_flag,*SS;
 int GNVars;
@@ -24,15 +24,16 @@ void GetOptimum(int func_num)
     for(int k=0;k<GNVars;k++)
         fscanf(fpt,"%lf",&xopt[k]);
     fclose(fpt);
-    fopt[0] = cec17_test_func(xopt, GNVars, 1, func_num);
+    fopt[0] = cec17_test_func(xopt, GNVars, 1, func_num, 0);
 }
-void Init(int D, int func_num)
+void Init(int D, int new_func_num)
 {
+    func_num = new_func_num;
     GNVars = D;
     GetOptimum(func_num);
 }
 double cec17func(double* x, int n) 
 {
-    return cec17_test_func(x, GNVars, 1, func_num);
+    return cec17_test_func(x, GNVars, 1, func_num, 1);
 }
 

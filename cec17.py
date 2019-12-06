@@ -222,8 +222,8 @@ def Init(D, func_nums):
 def cec17func(x):
     return _cec17.cec17func(x)
 
-def cec17_test_func(x, nx, mx, func_num):
-    return _cec17.cec17_test_func(x, nx, mx, func_num)
+def cec17_test_func(x, nx, mx, func_num, new_ini_flag):
+    return _cec17.cec17_test_func(x, nx, mx, func_num, new_ini_flag)
 
 cvar = _cec17.cvar
 

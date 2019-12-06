@@ -8,6 +8,9 @@
 #include <stdio.h>
 #include <math.h>
 #include <malloc.h>
+//#include <iostream>
+
+//using namespace std;
 
 #define INF 1.0e99
 #define EPS 1.0e-14
@@ -77,8 +80,10 @@ extern double *OShift,*M,*y,*z,*x_bound;
 extern int ini_flag,n_flag,func_flag,*SS;
 double f[1];
 
-double cec17_test_func(double *x, int nx, int mx,int func_num)
+double cec17_test_func(double *x, int nx, int mx,int func_num,int new_ini_flag)
 {
+	ini_flag = new_ini_flag;
+	//printf("\nInit flag %d\n",new_ini_flag);
 	int cf_num=10,i,j;
 	if (ini_flag==1)
 	{
